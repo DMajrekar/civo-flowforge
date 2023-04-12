@@ -1,0 +1,30 @@
+resource "helm_release" "flowforge" {
+  name = "flowforge"
+
+  repository = "https://flowforge.github.io/helm"
+  chart      = "flowforge"
+
+  create_namespace = false
+  namespace        = "flowforge"
+
+  set {
+    name  = "forge.entrypoint"
+    value = "http://example.com"
+  }
+
+  set {
+    name  = "forge.domain"
+    value = "example.com"
+  }
+
+  set {
+    name  = "forge.https"
+    value = "false"
+  }
+
+  set {
+    name  = "forge.localPostgresql"
+    value = "true"
+  }
+}
+

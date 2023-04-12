@@ -1,0 +1,23 @@
+---
+forge:
+  entryPoint: 
+  domain: 
+  https: true
+  localPostgresql: true
+  projectSelector:
+  managementSelector:
+
+  broker:
+    enabled: true
+
+  fileStore:
+    enabled: true
+    type: s3
+    options:
+      region: fra1
+      bucket: 
+      endpoint: https://objectstore.fra1.civo.com
+      forcePathStyle: true
+      credential:
+        accessKeyId: 
+        secretAccessKey: 
